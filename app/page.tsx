@@ -16,7 +16,7 @@ export default function Home() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
+              className="text-sm duration-500 text-zinc-400 hover:text-zinc-100"
             >
               {item.name}
             </Link>
@@ -29,12 +29,17 @@ export default function Home() {
         quantity={100}
       />
       <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+        <img 
+          src="/images/icon.png" 
+          alt="Icon" 
+          className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" 
+         />
         PelicanFlow
-      </h1>
+       </h1>
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
-        <h2 className="text-sm text-zinc-500 ">
+        <h2 className="text-sm text-zinc-100 ">
          An Ultimate Toolbox for Urban Planners and Designers.
         </h2>
       </div>
