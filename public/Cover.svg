@@ -10,7 +10,7 @@
 	.st4{font-size:150px;}
 	.st5{fill:#FFCC00;}
 </style>
-<rect x="0" y="-18" width="2025" height="1098"/>
+<rect x="0" width="1920" height="1080"/>
 <g>
 	<circle class="st0" cx="551.3" cy="548" r="11.3"/>
 	<circle class="st0" cx="528.8" cy="490.4" r="11.3"/>
