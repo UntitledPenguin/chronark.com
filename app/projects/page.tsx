@@ -43,10 +43,10 @@ export default async function ProjectsPage() {
       <Navigation />
       <div className="w-full h-auto mb-8 flex justify-center">
        <Image
-        src="/images/opengraph.png"
+        src="/images/Heading.png"
         alt="Title Picture"
         width={1920}
-        height={1080}
+        height={540}
         className="object-cover"
         />
       </div>
