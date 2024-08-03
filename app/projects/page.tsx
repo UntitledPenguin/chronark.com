@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import Image from 'next/image';
 import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -40,13 +41,22 @@ export default async function ProjectsPage() {
   return (
     <div className="relative pb-16">
       <Navigation />
+      <div className="w-full h-auto mb-8 flex justify-center">
+       <Image
+        src="/images/opengraph.png"
+        alt="Title Picture"
+        width={1920}
+        height={1080}
+        className="object-cover"
+        />
+      </div>
       <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
         <div className="max-w-2xl mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
-            Projects
+            Features
           </h2>
           <p className="mt-4 text-zinc-400">
-            Some of the projects are from work and some are on my own time.
+            Explore some of the top features and highlights in the latest update of PelicanFlow.
           </p>
         </div>
         <div className="w-full h-px bg-zinc-800" />
