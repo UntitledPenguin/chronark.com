@@ -39,7 +39,7 @@ export default async function ProjectsPage() {
     );
 
   return (
-    <div className="relative pb-16">
+    <div className="px-6 pt-24 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-32 lg:pt-40">
       <Navigation />
       <div className="w-full h-auto mb-8 flex justify-center">
        <Image
