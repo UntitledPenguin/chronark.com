@@ -6,19 +6,19 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "PelicanFlow",
+    template: "%s | PelicanFlow",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "An Ultimate Toolbox for Urban Planners and Designers.",
   openGraph: {
-    title: "chronark.com",
+    title: "PelicanFlow",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+      "An Ultimate Toolbox for Urban Planners and Designers.",
+    url: "https://pelicanflow.vercel.app/",
+    siteName: "PelicanFlow",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "/images/opengraph.png",
         width: 1920,
         height: 1080,
       },
@@ -27,22 +27,22 @@ export const metadata: Metadata = {
     type: "website",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Pelican",
     card: "summary_large_image",
   },
   icons: {
-    shortcut: "/favicon.png",
+    shortcut: "/images/pelican_icon.png",
   },
 };
 const inter = Inter({
