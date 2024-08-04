@@ -32,7 +32,7 @@ export default function Example() {
 		<div className="container px-4 mx-auto min-h-screen">
 		  <div className="flex flex-col items-center justify-center mt-16 sm:mt-32 md:mt-40 lg:mt-48">
 			{/* Introduction Text */}
-			<p className="text-sm text-zinc-100 max-w-xl" style={{ marginLeft: '10%' }}>
+			<p className="text-sm text-zinc-100 max-w-xl ml-[10%] mt-8">
 			  Hi, I'm Jiaqi, the creator of PeclicanFlow. I'm glad you're here! Feel free to reach out to me through any of the social platforms below if you are interest in this project. I'd love to connect and hear from you.
 			</p>
 			<Particles
