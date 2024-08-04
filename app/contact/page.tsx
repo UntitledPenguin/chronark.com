@@ -1,6 +1,7 @@
 "use client";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
+import Particles from "../components/particles";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 
@@ -34,6 +35,10 @@ export default function Example() {
 			<p className="text-sm text-zinc-100 max-w-xl">
 			  Hi, I'm Jiaqi, the creator of PeclicanFlow. I'm glad you're here! Feel free to reach out to me through any of the social platforms below if you are interest in this project. I'd love to connect and hear from you.
 			</p>
+			<Particles
+        		className="absolute inset-0 -z-10 animate-fade-in"
+       		 	quantity={500}
+     		 />
   
 			{/* Social Icons */}
 			<div className="mt-8 grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
@@ -65,6 +70,16 @@ export default function Example() {
 			</div>
 		  </div>
 		</div>
+
+		<footer className="bg-transparent text-gray-300 text-sm py-4 w-full text-center">
+        <p>
+          Based on Vercel Template by Chronark &bull; © {new Date().getFullYear()} &bull; PelicanFlow All rights reserved.
+        </p>
+      </footer>
+
+
 	  </div>
+	
 	);
+	
   }
