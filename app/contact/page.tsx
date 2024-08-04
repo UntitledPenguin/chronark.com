@@ -30,9 +30,9 @@ export default function Example() {
 	  <div className="bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 		<Navigation />
 		<div className="container px-4 mx-auto min-h-screen">
-		  <div className="flex flex-col items-start justify-center mt-16 sm:mt-32 md:mt-40 lg:mt-48">
+		  <div className="flex flex-col items-center justify-center mt-16 sm:mt-32 md:mt-40 lg:mt-48">
 			{/* Introduction Text */}
-			<p className="text-sm text-zinc-100 max-w-xl">
+			<p className="text-sm text-zinc-100 max-w-xl" style={{ marginLeft: '10%' }}>
 			  Hi, I'm Jiaqi, the creator of PeclicanFlow. I'm glad you're here! Feel free to reach out to me through any of the social platforms below if you are interest in this project. I'd love to connect and hear from you.
 			</p>
 			<Particles
