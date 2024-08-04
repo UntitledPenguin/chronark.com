@@ -32,7 +32,7 @@ export default function Home() {
         <img 
           src="/images/icon.png" 
           alt="Icon" 
-          className="h-10 w-10 sm:h-14 sm:w-14 md:h-20 md:w-20" 
+          className="h-9 w-9 sm:h-[60px] sm:w-[60px] md:h-[112px] md:w-[112px]" 
         /> 
         <span className="inline-block align-middle">
           PelicanFlow
