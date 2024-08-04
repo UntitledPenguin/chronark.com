@@ -38,13 +38,18 @@ export default function Home() {
           PelicanFlow
         </span>
       </h1>
-
+ 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-      <div className="my-16 text-center animate-fade-in">
-        <h2 className="text-sm text-zinc-100 ">
-         An Ultimate Toolbox for Urban Planners and Designers.
+
+      {/* Link around h2 */}
+      <a 
+        href="https://pelicanflow.vercel.app/projects" 
+        className="my-16 text-center animate-fade-in"
+      >
+        <h2 className="text-sm text-zinc-200">
+          An Ultimate Toolbox for Urban Planners and Designers.
         </h2>
-      </div>
+      </a>
     </div>
   );
 
