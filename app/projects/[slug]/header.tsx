@@ -43,7 +43,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
 	return (
 		<header
 			ref={ref}
-			className="relative isolate overflow-hidden bg-gradient-to-b via-cyan-400 from-orange-400 to-zinc-900"
+			className="relative isolate overflow-hidden bg-gradient-to-b via-cyan-400 from-orange-200 to-zinc-900"
 		>
 			<div
 				className={`fixed inset-x-0 top-0 z-50 backdrop-blur lg:backdrop-blur-none duration-200 border-b lg:bg-transparent ${
