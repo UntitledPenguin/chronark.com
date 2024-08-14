@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "976a991d9df149c1",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ac878c3bbd8f9a2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3ee152ac700c3b1d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "projects/Welcome.mdx",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b5c54b76e08229e8",
+    "type": "split",
+    "children": [
+      {
+        "id": "e2ed9e911e8f85a3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "41a679f1075bb975",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2d1977ff6678e276",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "235c170a1be5de13",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2c9800ab80faebeb",
+    "type": "split",
+    "children": [
+      {
+        "id": "93db0551b205eae7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "82dcf0d97d329722",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "projects/Welcome.mdx",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "835549d7208d159f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "projects/Welcome.mdx",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0aaf5c6f60007827",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a3fda50457ddc604",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "projects/Welcome.mdx"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "3ee152ac700c3b1d",
+  "lastOpenFiles": [
+    "projects/upstash-cli.mdx",
+    "projects/unkey.mdx",
+    "projects/terraform-provider-vercel.mdx",
+    "projects/qstash.mdx",
+    "projects/planetfall.mdx",
+    "projects/highstorm.mdx",
+    "projects/Documentation.mdx"
+  ]
+}
