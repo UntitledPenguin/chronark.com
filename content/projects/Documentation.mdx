@@ -1,8 +1,345 @@
 ---
 title: PelicanFlow Documentation Page
-description: The guide to understand how PelicanFlow works
+description: Full Documentation of the PelicanFlow
 date: 2024-08-20
 published: true
+repository: UntitledPenguin/PelicanFlow
 ---
 
-To be Updated
+
+**Version:** 0.1  
+
+**Environment:** Rhino 7  
+
+**Package Format:** .ghpython
+
+  
+![[Banner]](https://github.com/UntitledPenguin/PelicanFlow/blob/main/icon/Join-01.png)
+## Component Documentation
+
+
+### Excel Reader
+
+![Excel Reader](https://github.com/UntitledPenguin/PelicanFlow/blob/main/icon/Join-01.png)
+
+
+
+**Description:**  
+
+The Excel Reader reads an Excel file into a TreeTable.
+
+
+**Inputs:**  
+
+- **File Path:** The path to the Excel file, e.g., `'X:\Folder\SubFolder\Filename.xlsx'`.  
+
+- **With Heading:** A boolean indicating whether the input table has headings.
+
+  
+
+**Outputs:**  
+
+- **Heading:** A list containing all the headings in the table.  
+
+- **TreeTable:** A DataTree constructed based on the Excel input.
+
+  
+
+---
+
+  
+
+### Table Previewer
+
+![Table Previewer](https://github.com/UntitledPenguin/PelicanFlow/blob/main/icon/Join-02.png)
+
+  
+  
+
+**Description:**  
+
+Preview your DataTree in a tabular format. The DataTree must have one-dimensional branches, all of the same length.
+
+  
+
+**Inputs:**  
+
+- **TreeTable:** A DataTree to preview. The DataTree should have branches with the same number of items.  
+
+- **Heading:** A list of headings, where the length matches the number of branches in the DataTree.
+
+  
+
+**Output:**  
+
+- **Preview:** Connect this output to a Panel to view the data in a tabular format.
+
+  
+
+---
+
+  
+
+### Get Geometry ID
+
+![Get Geometry](https://github.com/UntitledPenguin/PelicanFlow/blob/main/icon/Join-04.png)
+
+  
+
+**Description:**  
+
+Generate a Geometry-ID TreeTable by reading the Name Attribute attached to the geometry.
+
+  
+
+**Inputs:**  
+
+- **Geometry:** A list of geometry (flatten the input if it’s a tree).  
+
+- **Type of Geometry:** A string indicating the type of object the geometry represents (e.g., 'Sphere' or 'Beam').
+
+  
+
+**Output:**  
+
+- **TreeTable:** A DataTree that saves the geometry and corresponding IDs.
+
+  
+
+---
+
+  
+
+### Group By Value
+
+![Group by value](https://github.com/UntitledPenguin/PelicanFlow/blob/main/icon/Join-07.png)
+
+  
+
+**Description:**  
+
+Group the TreeTable by a chosen key column's value. The column must contain numerical data.
+
+  
+
+**Inputs:**  
+
+- **Heading:** A list or flattened tree representing the table's headings.  
+
+- **Tree Table:** The input TreeTable to be grouped.  
+
+- **Key Index:** The index of the column to group by (index starts from 0).  
+
+- **Dividers:** A sorted list of numbers that defines the boundaries between groups, in ascending order.  
+
+- **Lower Included?:** Set to `True` to include the lower limit in each group, or `False` to include the upper limit instead.
+
+  
+
+**Outputs:**  
+
+- **Tree Table:** A two-dimensional DataTree where data is grouped based on the selected column.  
+
+- **Heading:** A new list of headings reflecting the grouping results.
+
+  
+
+---
+
+  
+
+### Group By Category
+
+![Group by category](https://github.com/UntitledPenguin/PelicanFlow/blob/main/icon/Join-05.png)
+
+  
+  
+
+**Description:**  
+
+Group the TreeTable based on a selected key column containing categorical data.
+
+  
+
+**Inputs:**  
+
+- **TreeTable:** The input TreeTable to be grouped.  
+
+- **Key Index:** The index of the column to group by (index starts from 0).
+
+  
+
+**Outputs:**  
+
+- **Category:** A list of all unique values from the selected column.  
+
+- **Tree Table:** A two-dimensional DataTree where the data is grouped according to the selected column.
+
+  
+
+---
+
+  
+
+### Get Group
+
+![Get Group](icon/join-08.png)
+
+  
+  
+
+**Description:**  
+
+Retrieve a specific group from a grouped TreeTable.
+
+  
+
+**Inputs:**  
+
+- **Grouped Tree Table:** The output from a 'GroupBy' component, containing the grouped data.  
+
+- **Group Index:** The index of the group to select (index starts from 0).
+
+  
+
+**Output:**  
+
+- **TreeTable:** The TreeTable corresponding to the selected group.
+
+  
+
+---
+
+  
+
+### Join by Column
+
+![Join by Column](https://github.com/UntitledPenguin/PelicanFlow/blob/main/icon/Join-03.png)
+
+  
+  
+
+**Description:**  
+
+Join two TreeTables by matching a common key column.
+
+  
+
+**Inputs:**  
+
+- **Base Table:** The table you want to use as the base.  
+
+- **New Columns:** The new columns you want to add to the base table.  
+
+- **Base Index:** The index of the key column in the base table (index starts from 0).  
+
+- **Joiner Index:** The index of the key column in the new table (index starts from 0).  
+
+- **Base Heading:** The heading of the base table (flattened into a list).  
+
+- **Added Heading:** The heading of the table to be added (flattened into a list).
+
+  
+
+**Outputs:**  
+
+- **TreeTable:** The new tree created from the two tables.  
+
+- **Heading:** The new list of headings after joining.
+
+  
+
+---
+
+  
+
+### Add New Column
+
+![Add Column](https://github.com/UntitledPenguin/PelicanFlow/blob/main/icon/Join-06.png)
+
+  
+
+**Description:**  
+
+Add a new column to the input TreeTable in the correct order.
+
+  
+
+**Inputs:**  
+
+- **Heading:** The list of headings for the TreeTable.  
+
+- **TreeTable:** The existing TreeTable to which you want to add a new column.  
+
+- **New Column:** The new column data to be added. The heading for this column will be automatically taken from the name of your input component/panel.
+
+  
+
+**Outputs:**  
+
+- **TreeTable:** The updated TreeTable with the new column added.  
+
+- **Heading:** The updated list of headings after adding the new column.
+
+  
+
+---
+
+  
+
+### Write to CSV
+
+  
+
+![Export](https://github.com/UntitledPenguin/PelicanFlow/blob/main/icon/Join_Artboard%201-09.png)
+
+  
+
+**Description:**  
+
+This component writes your TreeTable to a CSV file.
+
+  
+
+**Inputs:**  
+
+- **Tree Table:** The DataTree you want to convert to a CSV file.  
+
+- **Heading:** The heading of the given DataTree (optional).  
+
+- **File Name:** The name of the output file, e.g., `name.csv`.  
+
+- **File Path:** The path to the output file, e.g., `X:\Folder\SubFolder\Filename.csv`.  
+
+- **Export:** A boolean that controls whether to export.
+
+  
+
+**Output:**  
+
+- **Out:** A notification of the export status.
+
+  
+  
+
+---
+
+  
+
+## License
+
+  
+
+This project is licensed under the MIT License
+
+  
+
+## Copyright
+
+  
+
+&copy; 2024 Jiaqi Wang. All rights reserved.
+
+  
+
+---
