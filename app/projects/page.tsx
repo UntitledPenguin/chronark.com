@@ -22,8 +22,8 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "Welcome")!;
-  const top2 = allProjects.find((project) => project.slug === "Documentation")!;
+  const featured = allProjects.find((project) => project.slug === "DocumentationV2")!;
+  const top2 = allProjects.find((project) => project.slug === "Welcome")!;
   const top3 = allProjects.find((project) => project.slug === "Workflow")!;
   const sorted = allProjects
     .filter((p) => p.published)

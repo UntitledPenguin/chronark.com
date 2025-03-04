@@ -1,0 +1,261 @@
+---
+title: PelicanFlow Documentation Page
+description: Full Documentation of the PelicanFlow
+date: 2024-08-20
+published: true
+---
+
+![[Banner]](https://github.com/UntitledPenguin/chronark.com/blob/main/public/images/PelicanFlowDataBanner.png?raw=true)
+
+# PelicanFlow_Data Plugin Documentation
+
+## Overview  
+**PelicanFlow_Data** just got upgraded to its 2.0 version.
+For those who do not know Pelicanflow before:
+PelicanFlow is a Grasshopper plugin that enables users to perform basic data analysis and manipulation directly within the Grasshopper interface and also allows data exchange with external data sources more smoothly. This tool simplifies working with structured data, allowing designers and engineers to integrate computational workflows seamlessly.
+
+## Version Information  
+- **Plugin Name:** PelicanFlow_Data  
+- **Version:** 2.1
+- **Author:** Jiaqi Wang (2025)  
+- **Contact:** JiaqiWang097@gmail.com  
+
+## Installation  
+To install **PelicanFlow_Data**:  
+1. Download the zip file from Food4Rhino, and upzip the package.
+2. Copy the whole folder(which should include multiple supporting files along with gha) in the **Libraries** folder of your Grasshopper installation.  
+3. Restart Rhino and Grasshopper.  
+4. The plugin will now appear under the appropriate Grasshopper tab.
+
+---
+
+## What Components Do We Offer?
+
+### Generate Table ID  
+#### Description  
+The **Generate Table ID** component assigns unique IDs to a given list of geometries based on a user-defined prefix and starting index.  
+
+#### Inputs  
+1. **Geometry (Items)**  
+   - **Data Type:** Any (Geometries or data items)  
+   - **Description:** A list of geometries that need unique IDs.  
+2. **Prefix (Prefix)**  
+   - **Data Type:** String  
+   - **Description:** A shared prefix for all generated IDs.  
+3. **Starting Number (Start)**  
+   - **Data Type:** Integer  
+   - **Description:** The starting index for ID generation.
+
+#### Outputs  
+1. **TreeTable (Table)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** A data tree combining geometries with their assigned indices.  
+2. **Heading (Heading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The heading for the generated data tree.  
+
+---
+
+### Excel Reader  
+#### Description  
+The **Excel Reader** component imports an Excel sheet into Grasshopper as a structured data tree.  
+
+#### Inputs  
+1. **File Name (FileName)**  
+   - **Data Type:** String  
+   - **Description:** The name of the Excel file, including its extension.  
+2. **File Path (FilePath)**  
+   - **Data Type:** String  
+   - **Description:** The full path to the folder where the file is saved.  
+3. **Heading Included (Heading?)**  
+   - **Data Type:** Boolean  
+   - **Description:** Boolean option to indicate whether the first row should be used as headings.
+
+#### Outputs  
+1. **TreeTable (Table)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** A data tree containing the structured data from the Excel file.  
+2. **Heading (Heading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** A list of headings extracted from the first row (if applicable).  
+
+---
+
+### Add Column  
+#### Description  
+The **Add Column** component adds a new column to an existing data tree table.  
+
+#### Inputs  
+1. **Column Data (ColumnData)**  
+   - **Data Type:** Any (Data matching the column type)  
+   - **Description:** The list of values to be added as a new column.  
+2. **Column Name (ColumnName)**  
+   - **Data Type:** String  
+   - **Description:** The name of the new column.  
+3. **TreeTable (TreeTable)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** The existing tree table to which the column will be added.  
+4. **Table Heading (Heading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The heading of the existing tree table.  
+5. **List Mode On? (List?)**  
+   - **Data Type:** Boolean  
+   - **Description:** Boolean option to determine whether the added column is a list or a shared value.
+
+#### Outputs  
+1. **TreeTable (Table)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** A data tree combining the updated table with the new column.  
+2. **Heading (Heading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The updated heading for the data tree.  
+
+---
+
+### Join Tables  
+#### Description  
+The **Join Tables** component merges two data tables based on a shared column.  
+
+#### Inputs  
+1. **BaseTable (Base)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** The primary table used for joining.  
+2. **Base Heading (BaseHeading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The heading of the base table.  
+3. **BaseColumnIndex (BaseColumn)**  
+   - **Data Type:** Integer  
+   - **Description:** The index of the key column in the base table.  
+4. **Table to Join (Joiner)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** The secondary table that will be merged.  
+5. **Heading to Join (HeadingToJoin)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The heading of the table to be joined.  
+6. **Key Joining Index (JoinIndex)**  
+   - **Data Type:** Integer  
+   - **Description:** The index of the key column in the table to join.
+
+#### Outputs  
+1. **TreeTable (Table)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** A data tree that merges the two tables based on the shared column.  
+2. **Heading (Heading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The updated heading for the merged data tree.  
+
+---
+
+### Export As CSV  
+#### Description  
+The **Export As CSV** component exports a **TreeTable** as a comma-separated value (CSV) file, which can be opened in Excel.  
+
+#### Inputs  
+1. **DataTreeTable (TreeTable)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** The **DataTree** in **TableTree** format to be exported.  
+2. **Table Heading (Heading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The heading of the table.
+
+#### Outputs  
+1. **CSV data (CSV data)**  
+   - **Data Type:** String  
+   - **Description:** The data in CSV format, which can be copied to a text editor or notebook and saved as a CSV file.  
+
+---
+
+### Filter Table  
+#### Description  
+The **Filter Table** component filters a **Table Tree** based on a target value. It can exclude or include values based on equality or inequality to the target value.  
+
+#### Inputs  
+1. **BaseTable (Base)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** The **Table Tree** containing the data to be filtered.  
+2. **Base Heading (BaseHeading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The heading of the table.  
+3. **FilterColumnIndex (FilterColumn)**  
+   - **Data Type:** Integer  
+   - **Description:** The index of the column to be filtered.  
+4. **Target Value (Target Value)**  
+   - **Data Type:** Any (Target value or range)  
+   - **Description:** The target value or range to filter for.  
+5. **≠ Mode On? (≠ Mode On?)**  
+   - **Data Type:** Boolean  
+   - **Description:** Boolean option to filter out rows that are **NOT** equal to the target value.
+
+#### Outputs  
+1. **TreeTable (Table)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** The filtered data tree.  
+2. **Heading (Heading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The updated heading for the filtered data tree.  
+
+---
+
+### Sort Table  
+#### Description  
+The **Sort Table** component sorts a **Table Tree** based on a target column in either ascending or descending order.  
+
+#### Inputs  
+1. **BaseTable (Base)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** The **Table Tree** containing the data to be sorted.  
+2. **Base Heading (BaseHeading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The heading of the table.  
+3. **SortColumnIndex (SortingColumn)**  
+   - **Data Type:** Integer  
+   - **Description:** The index of the column to sort the table by.  
+4. **Descent? (Descent or not)**  
+   - **Data Type:** Boolean  
+   - **Description:** Boolean option to toggle between descending (True) and ascending (False) order.
+
+#### Outputs  
+1. **TreeTable (Table)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** The sorted data tree.  
+2. **Heading (Heading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The updated heading for the sorted data tree.  
+
+---
+
+### Table Previewer  
+#### Description  
+The **Table Previewer** component allows users to preview a **DataTree** in a table format directly within the Grasshopper interface.  
+
+#### Inputs  
+1. **TreeTable (TreeTable)**  
+   - **Data Type:** Any (Data Tree format)  
+   - **Description:** The **DataTree** to be previewed.  
+2. **Heading (Heading)**  
+   - **Data Type:** List of Strings  
+   - **Description:** The heading of the table to preview.  
+
+#### Outputs  
+1. **Preview (Preview)**  
+   - **Data Type:** String  
+   - **Description:** A preview string representation of the **TreeTable**.  
+
+---
+
+## User Guide  
+- **Use the Components**: Drag and drop the components into your Grasshopper canvas.  
+- **Read the Input and Output Options**: Each component provides specific inputs, outputs, and options that you can use to control the data processing.
+- **Export Results**: Components like **Export as CSV** allow you to save your processed data for further analysis outside of Grasshopper.
+
+---
+
+## License  
+PelicanFlow_Data is licensed under the MIT License. See LICENSE for more details.
+
+---  
+
+Feel free to contact the author for any inquiries or support.  
+
+
+---
